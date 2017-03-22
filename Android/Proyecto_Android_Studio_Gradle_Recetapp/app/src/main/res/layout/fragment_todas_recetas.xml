@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context="com.example.carlo.recetapp.TodasRecetas"
+    android:background="#E0F2F1">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:gravity="center"
+        android:layout_weight="85"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="\n\tEstas son todas nuestras recetas: \n"
+        android:id="@+id/textView15"
+        android:layout_above="@+id/expandableListView"
+        android:layout_alignParentStart="false" />
+
+
+
+
+
+    <ExpandableListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="14.50"
+        android:id="@+id/expandableListView3"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/linearLayout3"
+        android:layout_alignBottom="@+id/linearLayout3" />
+
+
+
+
+
+
+</LinearLayout>

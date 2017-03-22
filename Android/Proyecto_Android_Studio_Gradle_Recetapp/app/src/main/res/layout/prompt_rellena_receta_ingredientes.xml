@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/ingrediente_banner"
+            android:layout_width="fill_parent"
+            android:layout_weight="9.50"
+            android:layout_height="fill_parent"
+
+            android:textSize="15dp"
+            android:gravity="left"
+
+            android:text="\n\n\tSelecciona el ingrediente :\n "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Spinner
+            android:id="@+id/lista_ingredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+
+
+        <TextView
+            android:id="@+id/idreceta"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15dp"
+            android:gravity="left"
+            android:text="\n\tIntroduce el id del ingrediente en la receta : \n"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="9.50" />
+        <EditText
+            android:id="@+id/id_ingrediente_receta"
+            android:layout_width="fill_parent"
+            android:singleLine="true"
+            android:layout_weight="9.50"
+            android:layout_height="fill_parent"
+
+            android:inputType="textCapSentences">
+
+            <requestFocus />
+
+        </EditText>
+        <TextView
+            android:id="@+id/idreceta2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15dp"
+            android:gravity="left"
+            android:text="\n\tIntroduce la cantidad : \n"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="9.50" />
+        <EditText
+            android:id="@+id/ingrediente_cantidad"
+            android:layout_width="fill_parent"
+            android:singleLine="true"
+            android:layout_weight="9.50"
+            android:layout_height="fill_parent"
+
+            android:inputType="textCapSentences">
+
+            <requestFocus />
+
+        </EditText>
+        <TextView
+            android:id="@+id/idreceta33"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15dp"
+            android:gravity="left"
+            android:text="\n\tIntroduce la unidad de medida : \n"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="9.50" />
+        <EditText
+            android:id="@+id/ingrediente_unidad"
+            android:layout_width="fill_parent"
+            android:singleLine="true"
+            android:layout_weight="9.50"
+            android:layout_height="fill_parent"
+
+            android:inputType="textCapSentences">
+
+            <requestFocus />
+
+        </EditText>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

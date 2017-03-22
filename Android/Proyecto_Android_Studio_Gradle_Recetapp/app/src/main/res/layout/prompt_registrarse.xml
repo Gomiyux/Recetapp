@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prompt2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/newusermail"
+        android:layout_width="fill_parent"
+        android:layout_weight="25"
+        android:layout_height="fill_parent"
+
+        android:textSize="15dp"
+        android:gravity="left"
+
+        android:text="\n\n\tIntroduce tu email :\n "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/nuevousuarioemail"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:drawableLeft="@drawable/user"
+        android:layout_weight="25"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:inputType="textCapSentences">
+
+        <requestFocus />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/newuserid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="\n\tIntroduce tu id \n"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="25" />
+
+    <EditText
+
+        android:drawableLeft="@drawable/lock"
+        android:id="@+id/nuevousuarioid"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:layout_weight="25"
+        android:inputType="textCapSentences"
+        android:layout_height="fill_parent">
+
+        <requestFocus />
+
+    </EditText>
+
+
+</LinearLayout>

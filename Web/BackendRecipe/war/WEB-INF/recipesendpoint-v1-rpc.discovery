@@ -1,0 +1,520 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"zRMgE0l9nVDW4S28VYYcYQF9UW4/93kVuyYeVVatJ-0A-xyYf4eaSQ0\"",
+ "discoveryVersion": "v1",
+ "id": "recipesendpoint:v1",
+ "name": "recipesendpoint",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "example.com",
+ "ownerName": "example.com",
+ "packagePath": "recipebackend",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://myapp.appspot.com/_ah/api/",
+ "rpcUrl": "https://myapp.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CardInfo": {
+   "id": "CardInfo",
+   "type": "object",
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "summary": {
+     "type": "string"
+    },
+    "type": {
+     "type": "string"
+    }
+   }
+  },
+  "CollectionResponse_User": {
+   "id": "CollectionResponse_User",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "User"
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Email": {
+   "id": "Email",
+   "type": "object",
+   "properties": {
+    "email": {
+     "type": "string"
+    }
+   }
+  },
+  "Ingredient": {
+   "id": "Ingredient",
+   "type": "object",
+   "properties": {
+    "id_ingredient": {
+     "type": "string"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "name": {
+     "type": "string"
+    },
+    "nutritionaldesc": {
+     "type": "string"
+    }
+   }
+  },
+  "IngredientCollection": {
+   "id": "IngredientCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Ingredient"
+     }
+    }
+   }
+  },
+  "Ingrrecipe": {
+   "id": "Ingrrecipe",
+   "type": "object",
+   "properties": {
+    "id_ing": {
+     "type": "string"
+    },
+    "id_ingrrecipe": {
+     "type": "string"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "measurementu": {
+     "type": "string"
+    },
+    "quantity": {
+     "type": "string"
+    }
+   }
+  },
+  "Key": {
+   "id": "Key",
+   "type": "object",
+   "properties": {
+    "appId": {
+     "type": "string"
+    },
+    "complete": {
+     "type": "boolean"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "kind": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "namespace": {
+     "type": "string"
+    },
+    "parent": {
+     "$ref": "Key"
+    }
+   }
+  },
+  "Recipe": {
+   "id": "Recipe",
+   "type": "object",
+   "properties": {
+    "card": {
+     "$ref": "CardInfo"
+    },
+    "id_recipe": {
+     "type": "string"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "ling": {
+     "type": "array",
+     "items": {
+      "$ref": "Ingrrecipe"
+     }
+    },
+    "steps": {
+     "type": "string"
+    }
+   }
+  },
+  "User": {
+   "id": "User",
+   "type": "object",
+   "properties": {
+    "email": {
+     "$ref": "Email"
+    },
+    "id": {
+     "type": "string"
+    },
+    "key": {
+     "$ref": "Key"
+    },
+    "recipes": {
+     "type": "array",
+     "items": {
+      "$ref": "Recipe"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "recipesendpoint.addIngredient": {
+   "id": "recipesendpoint.addIngredient",
+   "parameters": {
+    "resource": {
+     "$ref": "Ingredient"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "Ingredient"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.addRecipe": {
+   "id": "recipesendpoint.addRecipe",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    },
+    "resource": {
+     "$ref": "Recipe"
+    }
+   },
+   "parameterOrder": [
+    "resource",
+    "id"
+   ],
+   "returns": {
+    "$ref": "Recipe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.addSpecificIngredientToRecipe": {
+   "id": "recipesendpoint.addSpecificIngredientToRecipe",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    },
+    "id_ingredient": {
+     "type": "string",
+     "required": true
+    },
+    "id_recipe": {
+     "type": "string",
+     "required": true
+    },
+    "resource": {
+     "$ref": "Ingrrecipe"
+    }
+   },
+   "parameterOrder": [
+    "resource",
+    "id_recipe",
+    "id",
+    "id_ingredient"
+   ],
+   "returns": {
+    "$ref": "Recipe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.addUser": {
+   "id": "recipesendpoint.addUser",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.getIngredient": {
+   "id": "recipesendpoint.getIngredient",
+   "allowGet": true,
+   "parameters": {
+    "id_ingredient": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id_ingredient"
+   ],
+   "returns": {
+    "$ref": "Ingredient"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.getRecipe": {
+   "id": "recipesendpoint.getRecipe",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    },
+    "id_recipe": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id_recipe",
+    "id"
+   ],
+   "returns": {
+    "$ref": "Recipe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.getUser": {
+   "id": "recipesendpoint.getUser",
+   "allowGet": true,
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.listIngredient": {
+   "id": "recipesendpoint.listIngredient",
+   "allowGet": true,
+   "returns": {
+    "$ref": "IngredientCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.listUser": {
+   "id": "recipesendpoint.listUser",
+   "allowGet": true,
+   "parameters": {
+    "cursor": {
+     "type": "string"
+    },
+    "limit": {
+     "type": "integer",
+     "format": "int32"
+    }
+   },
+   "returns": {
+    "$ref": "CollectionResponse_User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.removeIngredient": {
+   "id": "recipesendpoint.removeIngredient",
+   "parameters": {
+    "id_ingredient": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id_ingredient"
+   ],
+   "returns": {
+    "$ref": "Ingredient"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.removeRecipe": {
+   "id": "recipesendpoint.removeRecipe",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    },
+    "id_recipe": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id",
+    "id_recipe"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.removeUser": {
+   "id": "recipesendpoint.removeUser",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.updateRecipe": {
+   "id": "recipesendpoint.updateRecipe",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true
+    },
+    "id_recipe": {
+     "type": "string",
+     "required": true
+    },
+    "resource": {
+     "$ref": "Recipe"
+    }
+   },
+   "parameterOrder": [
+    "resource",
+    "id",
+    "id_recipe"
+   ],
+   "returns": {
+    "$ref": "Recipe"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "recipesendpoint.updateUserMainData": {
+   "id": "recipesendpoint.updateUserMainData",
+   "parameters": {
+    "resource": {
+     "$ref": "User"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prompt2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/gracias"
+        android:layout_width="fill_parent"
+        android:layout_weight="50"
+        android:layout_height="fill_parent"
+
+        android:textSize="20dp"
+        android:gravity="center"
+        android:drawableBottom="@drawable/ic_add_to_photos_black_24dp"
+        android:text="\n\n\t¡Receta añadida!\n "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="50"></LinearLayout>
+
+</LinearLayout>

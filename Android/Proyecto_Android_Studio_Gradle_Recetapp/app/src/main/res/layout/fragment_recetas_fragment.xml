@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context="com.example.carlo.recetapp.recetas_fragment"
+    android:background="#E0F2F1">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:gravity="center"
+        android:layout_weight="41"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="\n\tPulsa para compartir una receta \n"
+        android:id="@+id/textView15"
+        android:layout_above="@+id/expandableListView"
+        android:layout_alignParentStart="false" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:src="@drawable/ic_add_black_24dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="1sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:gravity="center"
+        android:layout_weight="39"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="\n\tLas recetas que has compartido apareceran aqui: \n"
+        android:id="@+id/textView16"
+        android:layout_above="@+id/expandableListView"
+        android:layout_alignParentStart="false" />
+
+
+    <ExpandableListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="19.50"
+        android:id="@+id/expandableListView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/linearLayout3"
+        android:layout_alignBottom="@+id/linearLayout3" />
+
+
+
+
+
+
+</LinearLayout>

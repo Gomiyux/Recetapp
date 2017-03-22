@@ -1,0 +1,586 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://myapp.appspot.com/_ah/api",
+  "name" : "recipesendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "discovery" : [ "PUBLIC" ],
+  "adapter" : {
+    "bns" : "https://myapp.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "example.com",
+  "ownerName" : "example.com",
+  "packagePath" : "recipebackend",
+  "methods" : {
+    "recipesendpoint.getUser" : {
+      "path" : "user/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.getUser",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.addSpecificIngredientToRecipe" : {
+      "path" : "addSpecificIngredientToRecipe/{id_recipe}/{id}/{id_ingredient}",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.addSpecificIngredientToRecipe",
+      "request" : {
+        "parameters" : {
+          "id_recipe" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id_ingredient" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.updateUserMainData" : {
+      "path" : "user",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.updateUserMainData",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.removeUser" : {
+      "path" : "user/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.removeUser",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "recipesendpoint.removeRecipe" : {
+      "path" : "recipe/{id}/{id_recipe}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.removeRecipe",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id_recipe" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.removeIngredient" : {
+      "path" : "ingredient/{id_ingredient}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.removeIngredient",
+      "request" : {
+        "parameters" : {
+          "id_ingredient" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.addUser" : {
+      "path" : "addUser",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.addUser",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.addIngredient" : {
+      "path" : "addIngredient",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.addIngredient",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.addRecipe" : {
+      "path" : "addRecipe/{id}",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.addRecipe",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.getRecipe" : {
+      "path" : "recipe/{id_recipe}/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.getRecipe",
+      "request" : {
+        "parameters" : {
+          "id_recipe" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.listIngredient" : {
+      "path" : "ingredient",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.listIngredient",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.updateRecipe" : {
+      "path" : "recipe/{id}/{id_recipe}",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.updateRecipe",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "string",
+            "required" : true
+          },
+          "id_recipe" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.listUser" : {
+      "path" : "user",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.listUser",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "recipesendpoint.getIngredient" : {
+      "path" : "ingredient/{id_ingredient}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.backendrecipe.RecipesEndPoint.getIngredient",
+      "request" : {
+        "parameters" : {
+          "id_ingredient" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "User" : {
+        "id" : "User",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
+          "id" : {
+            "type" : "string"
+          },
+          "email" : {
+            "$ref" : "Email"
+          },
+          "recipes" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Recipe"
+            }
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "namespace" : {
+            "type" : "string"
+          },
+          "complete" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "Email" : {
+        "id" : "Email",
+        "type" : "object",
+        "properties" : {
+          "email" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Recipe" : {
+        "id" : "Recipe",
+        "type" : "object",
+        "properties" : {
+          "id_recipe" : {
+            "type" : "string"
+          },
+          "card" : {
+            "$ref" : "CardInfo"
+          },
+          "steps" : {
+            "type" : "string"
+          },
+          "ling" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Ingrrecipe"
+            }
+          },
+          "key" : {
+            "$ref" : "Key"
+          }
+        }
+      },
+      "CardInfo" : {
+        "id" : "CardInfo",
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string"
+          },
+          "summary" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Ingrrecipe" : {
+        "id" : "Ingrrecipe",
+        "type" : "object",
+        "properties" : {
+          "id_ingrrecipe" : {
+            "type" : "string"
+          },
+          "quantity" : {
+            "type" : "string"
+          },
+          "measurementu" : {
+            "type" : "string"
+          },
+          "id_ing" : {
+            "type" : "string"
+          },
+          "key" : {
+            "$ref" : "Key"
+          }
+        }
+      },
+      "Ingredient" : {
+        "id" : "Ingredient",
+        "type" : "object",
+        "properties" : {
+          "id_ingredient" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "nutritionaldesc" : {
+            "type" : "string"
+          },
+          "key" : {
+            "$ref" : "Key"
+          }
+        }
+      },
+      "IngredientCollection" : {
+        "id" : "IngredientCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Ingredient"
+            }
+          }
+        }
+      },
+      "CollectionResponse_User" : {
+        "id" : "CollectionResponse_User",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "User"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.example.backendrecipe.RecipesEndPoint.getUser" : {
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.addSpecificIngredientToRecipe" : {
+        "request" : {
+          "$ref" : "Ingrrecipe"
+        },
+        "response" : {
+          "$ref" : "Recipe"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.updateUserMainData" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.removeUser" : {
+      },
+      "com.example.backendrecipe.RecipesEndPoint.removeRecipe" : {
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.removeIngredient" : {
+        "response" : {
+          "$ref" : "Ingredient"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.addUser" : {
+        "request" : {
+          "$ref" : "User"
+        },
+        "response" : {
+          "$ref" : "User"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.addIngredient" : {
+        "request" : {
+          "$ref" : "Ingredient"
+        },
+        "response" : {
+          "$ref" : "Ingredient"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.addRecipe" : {
+        "request" : {
+          "$ref" : "Recipe"
+        },
+        "response" : {
+          "$ref" : "Recipe"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.getRecipe" : {
+        "response" : {
+          "$ref" : "Recipe"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.listIngredient" : {
+        "response" : {
+          "$ref" : "IngredientCollection"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.updateRecipe" : {
+        "request" : {
+          "$ref" : "Recipe"
+        },
+        "response" : {
+          "$ref" : "Recipe"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.listUser" : {
+        "response" : {
+          "$ref" : "CollectionResponse_User"
+        }
+      },
+      "com.example.backendrecipe.RecipesEndPoint.getIngredient" : {
+        "response" : {
+          "$ref" : "Ingredient"
+        }
+      }
+    }
+  }
+}

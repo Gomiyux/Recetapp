@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_weight="9.50"
+        android:layout_height="fill_parent"
+
+        android:textSize="15dp"
+        android:gravity="left"
+
+        android:text="\n\n\tIntroduce el nombre de la receta :\n "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:layout_weight="9.50"
+        android:layout_height="fill_parent"
+
+        android:inputType="textCapSentences">
+
+        <requestFocus />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/idreceta"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="\n\tIntroduce el id de la receta : \n"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="9.50" />
+
+    <EditText
+
+        android:id="@+id/idreceta_in"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:layout_weight="9.50"
+        android:inputType="textCapSentences"
+        android:layout_height="fill_parent">
+
+        <requestFocus />
+
+    </EditText>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15dp"
+        android:text="\n\tIntroduce el tipo de receta : \n"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="left"
+        android:layout_weight="9.50" />
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput2"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:inputType="textCapSentences"
+        android:layout_height="fill_parent"
+        android:layout_weight="9.50">
+
+        <requestFocus />
+
+    </EditText>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="\n\tIntroduce un pequeño resumen : \n"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="9.50" />
+
+    <EditText
+
+        android:id="@+id/editTextDialogUserInput3"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:layout_weight="9.50"
+        android:inputType="textCapSentences"
+        android:layout_height="fill_parent">
+
+        <requestFocus />
+    </EditText>
+    <TextView
+        android:id="@+id/pasos"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="\n\tIntroduce los pasos a seguir : \n"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="9.50" />
+
+    <EditText
+
+        android:id="@+id/pasos_in"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+        android:layout_weight="9.50"
+        android:inputType="textCapSentences"
+        android:layout_height="fill_parent">
+
+        <requestFocus />
+
+    </EditText>
+    <TextView
+        android:id="@+id/pasos33"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="\n\tIntroduce el numero de ingredientes : \n"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="9.50" />
+
+    <EditText
+
+        android:id="@+id/numero_ingredientes"
+        android:layout_width="fill_parent"
+        android:singleLine="true"
+
+        android:layout_weight="9.50"
+        android:inputType="number"
+        android:layout_height="fill_parent">
+
+        <requestFocus />
+
+    </EditText>
+
+</LinearLayout>
+</ScrollView>

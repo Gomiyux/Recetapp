@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Inicio"
+            />
+
+        <item
+            android:id="@+id/todasrecetas"
+            android:icon="@drawable/recetas"
+            android:title="Recetas" />
+
+        <item
+            android:id="@+id/ingredientes"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Ingredientes" />
+
+        <item
+            android:id="@+id/recetas"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="Añade una receta" />
+
+    </group>
+
+
+
+    <item android:title="Soporte">
+
+
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/contacto"
+                android:title="Contacto" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/help"
+                android:title="Ayuda" />
+            </group>
+        </menu>
+
+    </item>
+
+
+</menu>

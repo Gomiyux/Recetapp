@@ -1,0 +1,176 @@
+
+<LinearLayout
+    android:id="@+id/indexado"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.example.carlo.recetapp.index"
+    android:background="#E0F2F1">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bienvenido a Recetapp \n\n\n Con esta aplicación podrás disfrutar y compartir tus recetas favoritas estés donde estés"
+        android:id="@+id/textView3"
+        android:layout_weight="22"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:gravity="center|bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:typeface="serif"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textStyle="italic"
+        android:layout_weight="28"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Desde el menú puedes añadir las recetas que más te gusten "
+        android:id="@+id/textView4"
+
+
+        android:typeface="serif"
+        android:textSize="18dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="24"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:weightSum="100"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="17.5"
+
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView6"
+            android:layout_weight="17"
+
+            android:src="@drawable/pizza"
+            android:scaleType="fitCenter"
+
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_above="@+id/textView4"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView8"
+            android:layout_weight="17.5"
+            android:src="@drawable/pasta"
+            android:scaleType="fitCenter"
+
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_above="@+id/imageView7"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView7"
+            android:layout_weight="17"
+            android:src="@drawable/sushi"
+            android:scaleType="fitCenter"
+
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_above="@+id/imageView3"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView3"
+            android:layout_weight="17"
+            android:src="@drawable/hamburguer"
+            android:scaleType="fitCenter"
+
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_above="@+id/imageView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView9"
+            android:layout_weight="17"
+            android:src="@drawable/pancakes"
+            android:scaleType="fitCenter"
+
+            android:layout_gravity="start"
+
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_above="@+id/imageView8"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="27"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Si tienes alguna duda contacta con nosotros en el apartado de soporte"
+        android:id="@+id/textView5"
+        android:typeface="serif"
+        android:textStyle="italic"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+
+
+
+
+</LinearLayout>

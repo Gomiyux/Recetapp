@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2F1"
+    tools:context="com.example.carlo.recetapp.Contacto">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="147dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Desarrollado por: \n\n -Carlos Gómez Coca \n -Sebastián López García\n -Dario Gómez Lancha"
+        android:id="@+id/textView7"
+        android:gravity="center"
+        android:textColor="#0c3a49"
+        android:background="#C4E4EE"
+        android:layout_gravity="center_vertical"
+
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="358dp"
+        android:layout_height="102dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="E-mail de contacto:\n soporte@recetapp.es \n\n E-mail de la administración: administracion@recetapp.es"
+        android:id="@+id/textView8"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="\nTelefono:\t\t 902 - 23 - 22 - 21 \n\n Fax: +34 901 122 122.  \n"
+        android:gravity="center"
+        android:id="@+id/textView16"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textView17"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="\nRecetapp© 2016. Huelva. España. \nTodos los derechos reservados.\n"
+        android:id="@+id/textView17"
+        android:gravity="center"
+        android:textColor="#0c3a49"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="#C4E4EE" />
+
+</RelativeLayout>
